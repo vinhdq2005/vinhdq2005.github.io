@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    background-color: whitesmoke;
+    width: 80%;
+    padding: 20px 20px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.container .title span:nth-child(1){
+    font-weight: 700;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+.container .title span:nth-child(2){
+    background: rgba(228, 228, 228, 0.5);
+    color: #808191;
+    font-size: 14px;
+    width: 170px;
+    border-radius: 16px;
+    padding: 20px ;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+.arrow{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    justify-content: space-around;
+}
+.arrow :hover{
+    background-color: #6c5dd3;
+    color: white;
+    transition: 0.3s;
+}
+.arrowleft{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.arrowright{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.contentleft{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0)), url(https://ui8-unity-gaming.herokuapp.com/img/categories-pic-1.png);
+    width: 45%;
+    height: 600px;
+    background-size: 100%;
+    padding: 30px;
+    cursor: pointer;
+    border-radius: 24px;
+}
+.name span{
+    width: 80px;
+    color: white;
+    font-size: 13px;
+    background: rgba(108, 93, 211, 0.5);
+    font-weight: 600;
+    padding: 3px 20px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+.name h6{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    margin: 5px 0px;
+}
+.view{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.viewpoint{
+    background: #7FBA7A;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0px 10px 0px 0px;
+}
+.name p{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+}
+.name button{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: white;
+    background: #6C5DD3;
+    height: 48px;
+    width: 120px;
+    border-radius: 15px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 5px 0px;
+}
+.name button:hover{
+    background-color: #6c5dd3d1;
+}
+.contentright{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 45%;
+    height: 600px;
+}
+.contentright :hover{
+    color: #6C5DD3;
+}
+.game{
+    display: flex;
+    width: 100%;
+    height: 180px;
+    background-color: white;
+    box-shadow: 5px 5px rgba(228, 228, 228, 0.5);
+    padding: 10px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.g1 .itemleft{
+    background-image: url(https://ui8-unity-gaming.herokuapp.com/img/categories-pic-2.png);
+}
+.g2 .itemleft{
+    background-image: url(https://ui8-unity-gaming.herokuapp.com/img/categories-pic-3.png);
+}
+.g3 .itemleft{
+    background-image: url(https://ui8-unity-gaming.herokuapp.com/img/categories-pic-4.png);
+}
+.game .itemleft{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    border-radius: 25px;
+}
+.itemright{
+    margin: 10px 30px;
+}
+.game p:nth-child(1){
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #3F8CFF;
+    background: rgba(108, 93, 211, 0.1);
+    text-align: center;
+    padding: 4px;
+    border-radius: 9px;
+}
+.game p:nth-child(2){
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 0px;
+}
+.game .view span{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #808191;
+    margin: 5px 0px;
+}
+.itemright button{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    background: rgba(228, 228, 228, 0.5);
+    color: rgb(0,0,0);
+    border: none;
+    height: 48px;
+    width: 120px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+.itemright button:hover{
+    background-color: #eaeaea;
+    transition: 0.5s;
+    color: rgb(0,0,0);
+}
