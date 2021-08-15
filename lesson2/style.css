@@ -108,6 +108,14 @@
     flex-direction: row;
     align-items: center;
 }
+/* .name .view::before{
+    content: " ";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #7FBA7A;
+} */
 .viewpoint{
     background: #7FBA7A;
     width: 8px;
@@ -146,6 +154,7 @@
 }
 .contentright :hover{
     color: #6C5DD3;
+    transition: 0.5s;
 }
 .game{
     display: flex;
