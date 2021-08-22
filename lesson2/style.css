@@ -7,6 +7,10 @@
     padding: 0px;
     box-sizing: border-box;
 }
+:root{
+    --font-inter: 'Inter', sans-serif;
+    --font-poppins:'Poppins', sans-serif;
+}
 .container{
     background-color: whitesmoke;
     width: 80%;
@@ -31,9 +35,10 @@
 .container .title span:nth-child(1){
     font-weight: 700;
     font-size: 25px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-poppins);
+    /* font-family: 'Poppins', sans-serif; */
 }
-.container .title span:nth-child(2){
+/* .container .title span:nth-child(2){
     background: rgba(228, 228, 228, 0.5);
     color: #808191;
     font-size: 14px;
@@ -42,6 +47,27 @@
     padding: 20px ;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
+} */
+/* .title input{
+    background: rgba(228, 228, 228, 0.5);
+    color: #808191;
+    font-size: 14px;
+    width: 170px;
+    border-radius: 16px;
+    padding: 20px ;
+    font-family: 'Inter', sans-serif;
+    border: none;
+} */
+#Trending{
+    background: rgba(228, 228, 228, 0.5);
+    color: #808191;
+    font-size: 14px;
+    width: 170px;
+    border-radius: 16px;
+    padding: 20px ;
+    font-family: var(--font-inter);
+    /* font-family: 'Inter', sans-serif; */
+    border: none;
 }
 .arrow{
     display: flex;
@@ -54,7 +80,7 @@
     color: white;
     transition: 0.3s;
 }
-.arrowleft{
+.arrowleft,.arrowright {
     background-color: white;
     width: 40px;
     height: 40px;
@@ -63,16 +89,6 @@
     align-items: center;
     border-radius: 50%;
 }
-.arrowright{
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-
 .contentleft{
     display: flex;
     justify-content: space-between;
@@ -93,7 +109,8 @@
     font-weight: 600;
     padding: 3px 20px;
     border-radius: 8px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter);
+    /* font-family: 'Inter', sans-serif; */
     cursor: pointer;
 }
 .name h6{
@@ -124,13 +141,15 @@
     margin: 0px 10px 0px 0px;
 }
 .name p{
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: var(--font-inter);
     font-size: 12px;
     color: white;
     font-weight: 500;
 }
 .name button{
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: var(--font-inter);
     font-size: 14px;
     color: white;
     background: #6C5DD3;
@@ -187,7 +206,8 @@
     margin: 10px 30px;
 }
 .game p:nth-child(1){
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: var(--font-inter);
     font-size: 13px;
     font-weight: 700;
     color: #3F8CFF;
@@ -197,20 +217,23 @@
     border-radius: 9px;
 }
 .game p:nth-child(2){
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: var(--font-poppins);
     font-size: 18px;
     font-weight: 500;
     margin: 5px 0px;
 }
 .game .view span{
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: var(--font-inter);
     font-size: 12px;
     font-weight: 500;
     color: #808191;
     margin: 5px 0px;
 }
 .itemright button{
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: var(--font-inter);
     font-weight: 700;
     font-size: 14px;
     background: rgba(228, 228, 228, 0.5);
