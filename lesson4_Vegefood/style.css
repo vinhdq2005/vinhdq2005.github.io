@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -144,4 +145,214 @@
     border: 1px solid #82ae46;
     background: transparent;
     box-sizing: border-box;
+}
+.selection{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 70px 150px;
+    justify-content: space-between;
+
+}
+.selection span{
+    font-size: 15px;
+    font-family: "Poppins",Arial,sans-serif;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+.selection p{
+    font-size: 12px;
+    font-family: "Poppins",Arial,sans-serif;
+    font-weight: 500;
+    color: rgba(0,0,0,.5);
+    margin-top: 5px;
+}
+.freeshipping,.alwaysfresh,.quality,.support{
+    width: 30%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.selection .freeshipping .icon{
+    width: 100px;
+    height: 100px;
+    background-size: 80%;
+    border-radius: 50%;
+    background-position: top 50% left 50%;
+    background-repeat: no-repeat;
+    background-color: #e4b2d6;
+    background-image: url(https://image.flaticon.com/icons/png/512/411/411763.png);
+    
+}
+.selection .alwaysfresh .icon{
+    width: 100px;
+    height: 100px;
+    background-size: 60%;
+    border-radius: 50%;
+    background-position: top 50% left 50%;
+    background-repeat: no-repeat;
+    background-color: #dcc698;
+    background-image: url(https://image.flaticon.com/icons/png/512/2329/2329903.png);
+}
+.selection .quality .icon{
+    width: 100px;
+    height: 100px;
+    background-size: 60%;
+    border-radius: 50%;
+    background-position: top 50% left 50%;
+    background-repeat: no-repeat;
+    background-color: #a2d1e1;
+    background-image: url(https://image.flaticon.com/icons/png/512/809/809498.png);
+}
+.selection .support .icon{
+    width: 100px;
+    height: 100px;
+    background-size: 60%;
+    border-radius: 50%;
+    background-position: top 50% left 50%;
+    background-repeat: no-repeat;
+    background-color: #dcd691;
+    background-image: url(https://image.flaticon.com/icons/png/512/950/950299.png);
+}
+.freeshipping .icon:hover{
+    background-color: #82ae46;
+    transition: 0.5s;
+}
+.alwaysfresh .icon:hover{
+    background-color: #82ae46;
+    transition: 0.5s;
+}
+.quality .icon:hover{
+    background-color: #82ae46;
+    transition: 0.5s;
+}
+.support .icon:hover{
+    background-color: #82ae46;
+    transition: 0.5s;
+}
+.content{
+    width: 100%;
+    padding: 0px 100px;
+}
+.content .vegetable{
+    width: 100%;
+    height: 520px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.content .vegetable .itemleft{
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fruit1{
+    width: 100%;
+    height: 250px;
+    background-position: bottom ;
+    background-size: 100%;
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xcategory-1.jpg.pagespeed.ic.alxe1GXuAu.webp);
+    display: flex;
+    align-items: flex-end;
+}
+.content .vegetable .itemleft p{
+    font-family: "Poppins",Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    background: #82ae46;
+    padding: 4px 16px;
+    display: inline;
+    color: #fff;
+    cursor: pointer;
+}
+.fruit2{
+    width: 100%;
+    height: 250px;
+    background-size: 105%;
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xcategory-2.jpg.pagespeed.ic.5035OoKGCA.webp);
+    display: flex;
+    align-items: flex-end;
+}
+.content .itemmidle{
+    width: 31%;
+    display: flex;
+}
+.content .itemmidle span{
+    font-family: "Lora",Georgia,serif;
+    color: #82ae46;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+.content .itemmidle p{
+    font-family: "Poppins",Arial,sans-serif;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 20px 0px;
+}
+.content .itemmidle button{
+    cursor: pointer;
+    background: #82ae46;
+    color: #fff;
+    border: none;
+    font-family: "Poppins",Arial,sans-serif;
+    font-size: 16px;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+.content .itemmidle button:hover{
+    border: 1px solid #82ae46;
+    background: #fff;
+    color: #82ae46;
+    transition: 0.5s;
+}
+.fruit3{
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xcategory.jpg.pagespeed.ic.JIYFOwf8jy.webp);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.content .itemright{
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fruit4{
+    width: 100%;
+    height: 250px;
+    background-size: 105%;
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xcategory-3.jpg.pagespeed.ic.IebYHvpTTo.webp);
+    display: flex;
+    align-items: flex-end;
+}
+.content .vegetable .itemright p{
+    font-family: "Poppins",Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    background: #82ae46;
+    padding: 4px 16px;
+    display: inline;
+    color: #fff;
+    cursor: pointer;
+}
+.fruit5{
+    width: 100%;
+    height: 250px;
+    background-size: 100%;
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xcategory-4.jpg.pagespeed.ic.mstLsR7ycw.webp);
+    display: flex;
+    align-items: flex-end;
 }
