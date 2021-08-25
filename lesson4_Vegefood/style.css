@@ -16,6 +16,9 @@
 .header{
     display: flex;
     flex-direction: column;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
 }
 .headerinfor{
     width: 100%;
@@ -31,9 +34,6 @@
     font-weight: 400;
 }
 .headerbox{
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
     width: 100%;
     height: 4.1rem;
     background: #fff;
@@ -43,6 +43,7 @@
     align-items: center;
     font-family: "Poppins",Arial,sans-serif;
     padding: 0rem 10rem;
+
 }
 .brand{
     color: #82ae46;
@@ -56,7 +57,6 @@
 }
 .menubar{
     width: 50%;
-    
 }
 .menubar ul{
     width: 100%;
@@ -74,9 +74,11 @@
     padding: 1.5rem 24px;
     cursor: pointer;
 }
+
 .dropdown{
     position: relative;
     display: inline-block;
+    
 }
 .dropdown-content{
     display: none;
@@ -355,4 +357,146 @@
     background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xcategory-4.jpg.pagespeed.ic.mstLsR7ycw.webp);
     display: flex;
     align-items: flex-end;
+}
+.content .product{
+    width: 100%;
+    padding: 90px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.content .product p:nth-child(1){
+    font-size: 18px;
+    font-family:  "Lora",Georgia,serif;
+    color: #82ae46;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.content .product h2{
+    font-size: 40px;
+    font-family: "Poppins",Arial,sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.content .product p:nth-child(3){
+    font-size: 15px;
+    color: gray;
+    font-weight: 400;
+    font-family: "Poppins",Arial,sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.box-buy{
+    width: 100%;
+    height: 660px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.product .buy{
+    width: 23%;
+    border: 1px solid #d8d8d8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.product .buy:hover{
+    transform: scale(1.01,1.01);
+    box-shadow: 5px 5px  rgba(235, 235, 235, 0.5);
+    transition: 0.5s;
+}
+.product .buy:hover .price{
+    display: none;
+}
+.product .buy:hover .option{
+    display: block;
+}
+.buy .item1{
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xproduct-1.jpg.pagespeed.ic.dWctTko08F.webp);
+}
+.buy .item2{
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xproduct-2.jpg.pagespeed.ic.2q3x49cb1q.webp);
+}
+.buy .item3{
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xproduct-3.jpg.pagespeed.ic.J11-RQjosA.webp);
+}
+.buy .item4{
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xproduct-4.jpg.pagespeed.ic.-zi4uKxOWe.webp);
+}
+.buy .item5{
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xproduct-5.jpg.pagespeed.ic.ZbzeN2jASE.webp);
+}
+.buy .item6{
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xproduct-6.jpg.pagespeed.ic.bV2cvmi8jU.webp);
+}
+.buy .item7{
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xproduct-7.jpg.pagespeed.ic.5cTir-xz-1.webp);
+}
+.buy .item8{
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/xproduct-8.jpg.pagespeed.ic.eAtHbtNqMI.webp);
+}
+.buy .item1,.item2,.item3,.item4,.item5,.item6,.item7,.item8{
+    position: relative;
+    width: 100%;
+    height: 230px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.buy p{
+    background: #82ae46;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff !important;
+    display: inline;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0px;
+}
+.buy span{
+    font-family: "Poppins",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+.buy .price{
+    padding: 15px;
+}
+.buy .price del{
+    font-family: "Poppins",Arial,sans-serif;
+    color: gray;
+    font-weight: 400;
+    font-size: 15px;
+}
+.buy .price span{
+    font-family: "Poppins",Arial,sans-serif;
+    color: #82ae46;
+    font-weight: 400;
+    font-size: 15px;
+}
+.option{
+    width: 50%;
+    display: none;
+    padding: 10px 0px;
+}
+.option ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-around;
+}
+.option li{
+    background-color: #82ae46;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
