@@ -1,0 +1,164 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left, #74ebd5, #ACB6E5);
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.itemleft{
+    width: 30%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: -10px -10px rgb(235, 235, 235);
+    border-radius: 5px;
+}
+.avatar{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.avatar img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.itemleft h1{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px 0px 40px;
+}
+.itemleft a{
+    color: #000;
+}
+.itemleft i{
+    font-size: 30px;
+}
+.aboutme{
+    width: 50%;
+    height: 90%;
+    background: whitesmoke;
+    padding: 10px;
+    overflow: auto;
+}
+.aboutme::-webkit-scrollbar{
+    width: 5px;
+}
+.aboutme::-webkit-scrollbar-track{
+    background: white;
+}
+.aboutme::-webkit-scrollbar-thumb{
+    background: gray;
+    border-radius: 5px;
+}
+.aboutme h3{
+    font-size: 30px;
+    border-bottom: 1px solid gray;
+    color: #2D46B9;
+    font-family: 'Titillium Web', sans-serif;
+}
+.aboutme .infor{
+    width: 100%;
+}
+.infor .content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.infor .content p{
+    font-size: 18px;
+    width: 50%;
+    border-right: 1px solid gray;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+.infor .content ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    list-style: none;
+    padding: 10px;
+}
+.infor .content li{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d3d3d3;
+    font-family: 'Oswald', sans-serif;
+}
+.infor .content span:nth-child(1){
+    background: #74ebd5;
+    padding: 5px 10px;
+}
+.hobby{
+    width: 100%;
+}
+.hobby h5{
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+}
+.hobby ul{
+    width: 100%;
+    padding: 5px;
+    list-style: none;
+}
+.hobby li{
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+}
+.contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contact .write{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact .write input{
+    width: 80%;
+    height: 50px;
+    border: 1px solid gray;
+    margin-top: 20px;
+    padding: 0px 10px;
+    outline: none;
+}
+.contact .write button{
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    background: #2D46B9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.contact .write button:hover{
+    background: white;
+    border: 1px solid #2D46B9;
+    color: #2D46B9;
+    transition: 0.5s;
+}
