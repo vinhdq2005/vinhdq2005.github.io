@@ -15,11 +15,16 @@
     background: #000;
 }
 
-#nav li{
+#nav > li{
+    display: inline-block;
+    position: relative;
+}
+
+#nav{
     display: inline-block;
 }
 
-#nav li a{
+#nav > li > a{
     color: #fff;
     font-family: "Lato", sans-serif;
     font-size: 15px;
@@ -30,13 +35,54 @@
     display: inline-block;
 }
 
-#nav li:hover a{
+.subnav li:hover a,
+#nav > li:hover > a{
     background: #ccc;
     color: #000;
 }
 #nav .subnav{
     display: none;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+.subnav li{
+    display: block;
+
+}
+
+.subnav li a{
+    color: #000;
+    height: 40px;
+    min-width: 160px;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 0 16px;
+    line-height: 40px;
+    display: block;
+}
+
+#header .search{
+    float: right;
+}
+
+#header .search i{
+    color: #fff;
+    line-height: 46px;
+    font-size: 16px;
+    padding: 0 24px;
+    cursor: pointer;
+}
+
+#header .search:hover{
+    background: #f44336;
+}
+
 #slider{
 
 }
