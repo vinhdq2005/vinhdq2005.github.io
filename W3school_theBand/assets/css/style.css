@@ -289,6 +289,8 @@
     font-family: "Lato", sans-serif;
     font-size: 15px;
     padding: 8px 16px;
+    cursor: pointer;
+    border: none;
 }
 
 .place-buy-btn:hover{
@@ -303,6 +305,9 @@
 
 
 /* Model */
+.modal.open{
+    display: flex;
+}
 
 .modal{
     position: fixed;
@@ -311,16 +316,22 @@
     left: 0;
     right: 0;
     background-color: rgba(0,0,0,0.3);
-    display: flex;
+    
+    display: none;
     justify-content: center;
     align-items: center;
+
 }
+
+
 
 .modal .modal-container{
     width: 900px;
     max-width: calc(100% - 50px);
     background-color: #fff;
     position: relative;
+    /* gọi css từ @keyframes */
+    animation: modalFadein ease 0.5s;
 }
 
 .modal .modal-close{
@@ -399,3 +410,15 @@
 
 }
 
+/* tạo ra chuyển động */
+@keyframes modalFadein {
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
