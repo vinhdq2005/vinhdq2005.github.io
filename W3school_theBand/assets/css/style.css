@@ -299,15 +299,8 @@
     transition: 0.5s;
 }
 
-
-
-
-
-
 /* Model */
-.modal.open{
-    display: flex;
-}
+
 
 .modal{
     position: fixed;
@@ -316,14 +309,14 @@
     left: 0;
     right: 0;
     background-color: rgba(0,0,0,0.3);
-    
-    display: none;
+    display: none ;
     justify-content: center;
     align-items: center;
-
 }
 
-
+.modal.open{
+    display: flex;
+}
 
 .modal .modal-container{
     width: 900px;
