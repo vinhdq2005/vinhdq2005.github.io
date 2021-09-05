@@ -10,6 +10,7 @@
     color: #fff !important;
 }
 
+
 #main{
 
 }
@@ -299,6 +300,58 @@
     transition: 0.5s;
 }
 
+/* contact section */
+
+.section-body{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+
+.section-body .section-body-left>p{
+    line-height: 1.5;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+.section-body .section-body-left i{
+    width: 30px;
+    padding-right: 15px;
+}
+
+.section-body-right form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.section-body-right .form-control{
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+}
+
+.section-body-right .form-submit{
+    background-color: #000;
+    width: 70px;
+    height: 38px;
+    color: #fff;
+    border: none;
+    display: inline-block;
+    margin-right: 0px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.form-submit:hover{
+    background-color: #ccc;
+    color: #000;
+    border: 1px solid #000;
+}
 /* Model */
 
 

@@ -119,7 +119,26 @@
             <div class="content-section">
                 <h2 class="section-heading">Contact</h2>
                 <p class="section-sub-heading">Fan? Drop a notes!</p>
+                
+                <div class="section-body">
+                    <div class="section-body-left">
+                        <p><i class="fas fa-map-marker-alt"></i>Chicago, US</p>
+                        <p><i class="fas fa-phone-alt"></i>Phone: +00 151515</p>
+                        <p><i class="fas fa-envelope"></i>Email: mail@mail.com</p>
 
+                    </div>
+
+                    <div class="section-body-right">
+                        <form action="">
+                            <div class="contact-form">
+                                <input type="text" placeholder="Name" required class="form-control">
+                                <input type="email" placeholder="Email" required class="form-control">
+                            </div>
+                            <input type="text" placeholder="Massage" required class="form-control">
+                            <input type="submit" value="SEND" required class="form-submit">
+                        </form>
+                    </div>
+                </div>
             </div>
 
 
@@ -180,32 +199,32 @@
         const modal = document.querySelector('.js-modal')
         const modalClose = document.querySelector('.js-modal-close')
         const modalContainer = document.querySelector('.js-modal-container')
-
+      
         // hàm hiển thị modal mua vé (thêm class open vào modal)
         function showBuytickets() {
             modal.classList.add('open')
         }
-
+      
         // hàm ẩn modal mua vé (ản class open khỏi modal)
         function hideBuytickets() {
             modal.classList.remove('open')
         }
-
+      
         // lặp qua từng thẻ button và nghe hành vi click
         for (const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuytickets)
         }
-
+      
         // nghe hành vi click vào button close
         modalClose.addEventListener('click', hideBuytickets)
-
+      
         modal.addEventListener('click', hideBuytickets)
-
+      
         // dừng hành động nổi bọt (ngừng từ container vào trong)
         modalContainer.addEventListener('click', function(event) {
             event.stopPropagation()
         })
-    </script>
+      </script>
 
 
 </body>
