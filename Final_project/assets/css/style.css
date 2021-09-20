@@ -33,11 +33,15 @@
 }
 
 #header {
+    width: 100vw;
     background-color: whitesmoke;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 1;
+    padding-right: 30px;
 }
 
 #header .brand-logo {
@@ -244,11 +248,9 @@
 /* About Us */
 
 #aboutus {
-    width: 100vw;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     background-color: #eee;
-
 }
 
 #aboutus .item-left {
@@ -291,5 +293,6 @@
 
 #aboutus .item-right {
     width: 50%;
-    background: url(https://static.wixstatic.com/media/11062b_04cb21581b0c4aa184ffe8950598665b~mv2.jpg/v1/fill/w_675,h_640,fp_0.67_0.36,q_85,usm_0.66_1.00_0.01/11062b_04cb21581b0c4aa184ffe8950598665b~mv2.webp);
+    background: url(https://static.wixstatic.com/media/11062b_04cb21581b0c4aa184ffe8950598665b~mv2.jpg/v1/fill/w_675,h_640,fp_0.67_0.36,q_85,usm_0.66_1.00_0.01/11062b_04cb21581b0c4aa184ffe8950598665b~mv2.webp) top center / cover no-repeat;
+
 }
