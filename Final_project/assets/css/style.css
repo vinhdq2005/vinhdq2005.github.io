@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 20px;
+}
+
+
+
+:root {
+    --textcolor: #D6001C;
+    --textsize: 16px;
+    --textfont: 'Source Sans Pro', sans-serif;
+    --smallheadingsize: 36px;
+    --headingsize: 72px;
+    --headingfont: 'Poppins', sans-serif; 
+    --underline-height: .2em;
+    --transition-duration: .5s;
+}
+
+#header {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .brand-logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* menu bar */
+#header > #nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    position: relative;
+    white-space: nowrap;
+}
+
+.underline {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    height: var(--underline-height);
+    width: 20%;
+    background: #D6001C;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    transition: transform var(--transition-duration) ease-in-out;
+}
+
+.underline:nth-child(1) {
+    background: yellow;
+    transition: calc(var(--transition-duration) * .8);
+  }
+  .underline:nth-child(2) {
+    background: cyan;
+    transition: calc(var(--transition-duration) * 1.2);
+  }
+  .underline:nth-child(3) {
+    background: magenta;
+  }
+  
+  a {
+    display: inline-block;
+    z-index: 10;
+    width: 20%;
+    padding: 1em 0;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  nav.black .underline {
+    background: #D6001C;
+    border-radius: 0.25em;
+    height: calc(var(--underline-height) / 2);
+    mix-blend-mode: initial;
+  }
+
+
+#nav > li > a {
+    font-size: var(--textsize);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--textcolor);
+    margin: 0 10px;
+}
+
+#nav > li > a:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+    text-shadow: 1px 1px #ccc;
+}
+
+  /* close menu bar */
+#header-option {
+    display: flex;
+    flex-direction: row;
+}
+
+#header-option > .account {
+    display: flex;
+}
+
+#header-option > .account > p {
+    margin-left: 10px;
+}
+
+#header .search-icon,
+#header .cart-icon,
+#header .account {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    color: var(--textcolor);
+    margin: 0 10px;
+}
+
+#header .search-icon,
+#header .cart-icon {
+    width: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+#header .account {
+    font-size: var(--textsize);
+    background-color: #ccc;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#header .search-icon:hover,
+#header .cart-icon:hover,
+#header .account:hover {
+    cursor: pointer;
+    background-color: #D6001C;
+    color: #fff;
+    transition: 0.5s;
+} 
+
+/* slider */
+
+#slider {
+    height: 100vh;
+    background: url('/Final_project/assets/img/11062b_91a611d9fc74418da54bb15a2e85481d_mv2.jpg') center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 50px;
+
+}
+
+#slider .button-changeslide {
+    width: 15px;
+    height: 15px;
+    background-color: #D6001C;
+    opacity: 0.5;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: none;
+}
+
+#slider .button-changeslide:hover {
+    cursor: pointer;
+}
+
+/* content */
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+#content .heading-text {
+    font-family: var(--headingfont);
+    font-size: var(--headingsize);
+    color: var(--textcolor);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+#content .body-text {
+    width: 900px;
+    margin-bottom: 150px;
+}
+
+.body-text {
+    color: var(--textcolor);
+    font-family: var(--textfont);
+    font-size: var(--textsize);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#content .sale-product {
+    width: 200px;
+    height: 300px;
+}
+
+#content .image-sale-product {
+    height: 200px;
+    background-color: #ccc;
+}
+
+#content .name-product,
+#content .price-product {
+    font-family: var(--textfont);
+    font-size: var(--textsize);
+    color: var(--textcolor);
+    line-height: 50px;
+    
+}
+
+#content .name-product {
+    border-bottom: 1px solid #D6001C;
+}
+
+/* About Us */
+
+#aboutus {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    background-color: #eee;
+
+}
+
+#aboutus .item-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 50px;
+}
+
+#aboutus .small-heading-text {
+    font-family: var(--headingfont);
+    font-size: var(--smallheadingsize);
+    color: var(--textcolor);
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#aboutus .body-text {
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+#aboutus .aboutus-btn {
+    width: 150px;
+    padding: 15px 0;
+    border: none;
+    background-color: var(--textcolor);
+    font-family: var(--textfont);
+    font-size: var(--textsize);
+    color: white;
+
+}
+
+#aboutus .aboutus-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+#aboutus .item-right {
+    width: 50%;
+    background: url(https://static.wixstatic.com/media/11062b_04cb21581b0c4aa184ffe8950598665b~mv2.jpg/v1/fill/w_675,h_640,fp_0.67_0.36,q_85,usm_0.66_1.00_0.01/11062b_04cb21581b0c4aa184ffe8950598665b~mv2.webp);
+}
