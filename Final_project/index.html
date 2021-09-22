@@ -135,6 +135,51 @@
         </div>
     </div>
 
+    <div id="login" class="login">
+        <div class="login-container">
+            <div class="login-left">
+
+            </div>
+            <div class="login-right">
+                <h5 class="login-header">
+                    Log in
+                </h5>
+                <form action="" class="login-form">
+                    <input type="text" class="username" placeholder="Login">
+                    <input type="password" class="password" placeholder="Password">
+                    <div class="remember-account">
+                        <input type="checkbox" name="" class="remember-box" id="">
+                        <label for="remember-box">Remember me</label>
+                    </div>
+                    <input type="submit" value="Login" class="submit-btn">
+                </form>
+                <p class="login-text">Or join with</p>
+                <div class="connect-social">
+                    <div class="network-icon">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="network-icon">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="network-icon">
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                <p class="login-text">Not a member yet? <a href="#">Sign up!</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let login = document.querySelector(".account")
+        let loginPage = document.querySelector("#login")
+
+        function showLogin() {
+            loginPage.classList.add('open')
+        }
+
+        login.addEventListener('click', showLogin)
+    </script>
 
     <script src="./index.js"></script>
 </body>
