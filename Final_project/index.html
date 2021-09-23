@@ -8,6 +8,7 @@
     <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="shortcut icon" href="./assets/img/logo chuẩn.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 </head>
 <body>
     <div id="container">
@@ -25,6 +26,10 @@
             </ul>
 
             <div id="header-option">
+                <div class="search-bar">
+                    <input type="text" placeholder="" >
+                    <i class="fas fa-search"></i>
+                </div>
                 <div class="search-icon">
                     <i class="fas fa-search"></i>
                 </div>
@@ -39,11 +44,31 @@
 
         </div>
         <div id="slider">
-            <button class="button-changeslide"></button>
-            <button class="button-changeslide"></button>
-            <button class="button-changeslide"></button>
-            <button class="button-changeslide"></button>
-            <button class="button-changeslide"></button>
+            <!-- <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 02</li>
+                        <li class="splide__slide">Slide 03</li>
+                    </ul>
+                </div>
+            </div> -->
+            <div id="image-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="/Final_project/assets/img/slidebackground1.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="/Final_project/assets/img/slidebackground2.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="/Final_project/assets/img/slidebackground3.jpg">
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
         </div>
         <div id="content">
             <h3 class="heading-text">The D&F experience</h3>
@@ -51,11 +76,14 @@
             <div id="box-sale-product">
                 <div class="sale-product">
                     <div class="image-sale-product">
-    
+                        <div class="product-quickview">
+                            <p><a href="#">Quick view</a></p>
+                        </div>
                     </div>
                     <p class="name-product">Khô gà</p>
                     <p class="price-product">39.999đ</p>
                 </div>
+
             </div>
         </div>
         <div id="aboutus">
@@ -170,17 +198,11 @@
         </div>
     </div>
 
-    <script>
-        let login = document.querySelector(".account")
-        let loginPage = document.querySelector("#login")
+    <div id="chat">
+        <a href="#"><i class="fas fa-comment-lines"></i> Let's chat</a>
+    </div>
 
-        function showLogin() {
-            loginPage.classList.add('open')
-        }
-
-        login.addEventListener('click', showLogin)
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>
