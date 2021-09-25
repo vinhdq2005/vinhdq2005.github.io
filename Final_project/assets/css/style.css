@@ -22,7 +22,9 @@
 
 
 :root {
-    --textcolor: #D6001C;
+    --textcolor1: #09b445;
+    --textcolor2: #fff;
+    --textcolor3: #000;
     --textsize: 16px;
     --textfont: 'Source Sans Pro', sans-serif;
     --smallheadingsize: 36px;
@@ -30,6 +32,8 @@
     --headingfont: 'Poppins', sans-serif; 
     --underline-height: .2em;
     --transition-duration: .5s;
+    --backgroundcolor1: #09b445;
+    --backgroundcolor2: #ff9c2e ;
 }
 
 #header {
@@ -65,7 +69,7 @@
     bottom: 0;
     left: 0;
     height: var(--underline-height);
-    width: 20%;
+    width: 70px;
     background: #D6001C;
     pointer-events: none;
     mix-blend-mode: multiply;
@@ -100,19 +104,31 @@
     mix-blend-mode: initial;
   }
 
+#nav > li {
+    width: 70px;
+    
+}
 
 #nav > li > a {
+    width: 80%;
+    text-align: center;
     font-size: var(--textsize);
+    font-family: var(--headingfont);
     font-weight: 600;
     text-decoration: none;
-    color: var(--textcolor);
+    color: var(--textcolor3);
     margin: 0 10px;
 }
 
-#nav > li > a:hover {
-    opacity: 0.8;
+#nav > li:hover {
+    background-color: var(--backgroundcolor1);
+    color: var(--textcolor2);
     transition: 0.5s;
-    text-shadow: 1px 1px #ccc;
+}
+
+#nav > li:hover > a {
+    color: var(--textcolor2);
+
 }
 
   /* close menu bar */
@@ -138,7 +154,7 @@
     justify-content: center;
     align-items: center;
     height: 30px;
-    color: var(--textcolor);
+    color: var(--textcolor3);
     margin: 0 10px;
 }
 
@@ -151,6 +167,7 @@
 
 #header .account {
     font-size: var(--textsize);
+    font-family: var(--headingfont);
     background-color: #ccc;
     padding: 5px;
     border-radius: 20px;
@@ -160,7 +177,7 @@
 #header .cart-icon:hover,
 #header .account:hover {
     cursor: pointer;
-    background-color: #D6001C;
+    background-color: var(--backgroundcolor1);
     color: #fff;
     transition: 0.5s;
 } 
@@ -189,7 +206,7 @@
 }
 
 #header .search-bar > i {
-    color: var(--textcolor);
+    color: var(--textcolor1);
     position: absolute;
     right: 10px;
     line-height: 30px;
@@ -215,7 +232,7 @@
 #content .heading-text {
     font-family: var(--headingfont);
     font-size: var(--headingsize);
-    color: var(--textcolor);
+    color: var(--textcolor3);
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 30px;
@@ -228,19 +245,21 @@
 }
 
 .body-text {
-    color: var(--textcolor);
+    color: var(--textcolor3);
     font-family: var(--textfont);
     font-size: var(--textsize);
     letter-spacing: 1px;
 }
 
-#content .sale-product {
+#content .sale-product,
+#box-sale-product .sale-product {
     width: 200px;
     height: 300px;
     cursor: pointer;
 }
 
-#content .image-sale-product {
+#content .image-sale-product,
+#box-sale-product .image-sale-product {
     height: 200px;
     background-color: #ccc;
     display: flex;
@@ -249,35 +268,41 @@
 }
 
 #content .name-product,
-#content .price-product {
+#content .price-product,
+#box-sale-product .name-product,
+#box-sale-product .price-product {
     font-family: var(--textfont);
     font-size: var(--textsize);
-    color: var(--textcolor);
+    color: var(--textcolor3);
     line-height: 50px;
     
 }
 
-#content .name-product {
-    border-bottom: 1px solid #D6001C;
+#content .name-product,
+#box-sale-product .name-product {
+    border-bottom: 1px solid #09b445;
 }
 
-#content .product-quickview {
+#content .product-quickview,
+#box-sale-product .product-quickview {
     display: none;
 }
 
-#content .product-quickview > p > a{
+#content .product-quickview > p > a,
+#box-sale-product .product-quickview > p > a{
     background-color: #fff;
     width: 100%;
     font-family: var(--headingfont);
     font-size: 24px;
     text-decoration: unset;
-    color: var(--textcolor);
+    color: var(--textcolor1);
     font-weight: 200;
     padding: unset;
     padding: 12px 0;
 }
 
-#content .sale-product:hover .product-quickview {
+#content .sale-product:hover .product-quickview,
+#box-sale-product .sale-product:hover .product-quickview {
     display: block;
     animation: quickViewfadein ease 0.5s;
 }
@@ -287,7 +312,7 @@
 #aboutus {
     height: 100vh;
     display: flex;
-    background-color: #eee;
+    background-color: var(--backgroundcolor1);
 }
 
 #aboutus .item-left {
@@ -301,13 +326,14 @@
 .small-heading-text {
     font-family: var(--headingfont);
     font-size: var(--smallheadingsize);
-    color: var(--textcolor);
+    color: var(--textcolor2);
     font-weight: 500;
     margin-bottom: 30px;
     text-transform: uppercase;
 }
 
 #aboutus .body-text {
+    color: var(--textcolor2);
     text-align: justify;
     margin-bottom: 30px;
 }
@@ -316,16 +342,16 @@
     width: 150px;
     padding: 15px 0;
     border: none;
-    background-color: var(--textcolor);
+    background-color: var(--backgroundcolor2);
     font-family: var(--textfont);
     font-size: var(--textsize);
-    color: white;
-
+    color: var(--textcolor3);
+    font-weight: 600;
 }
 
 #aboutus .aboutus-btn:hover {
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.9;
     transition: 0.5s;
 }
 
@@ -337,26 +363,26 @@
 /* contact */
 
 #contact {
-    background-color: #eee;
+    background-color: #fff;
     display: flex;
     padding: 50px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: var(--textcolor);
+    color: var(--textcolor3);
     opacity: 1; /* Firefox */
     font-family: var(--textfont);
     font-size: var(--textsize);
 }
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: var(--textcolor);
+    color: var(--textcolor1);
     font-family: var(--textfont);
     font-size: var(--textsize);
 }
   
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: var(--textcolor);
+    color: var(--textcolor1);
     font-family: var(--textfont);
     font-size: var(--textsize);
 }
@@ -367,6 +393,10 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 100px;
+}
+
+#contact .contact-left > .small-heading-text {
+    color: var(--textcolor3);
 }
 
 #contact .contact-left > .body-text {
@@ -415,18 +445,16 @@
 #address,
 #subject,
 #massage {
-    background-color: transparent;
-    padding: 10px 0px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #ccc;
+    background-color: var(--textcolor2);
+    padding: 10px 10px;
     border: none;
-    border-bottom: 1px solid #D6001C;
     outline: none;
 }
 
 #contact .contact-right .contact-form-box:hover > input{
-    border-bottom: none;
-    border: 1px solid;
-    padding-left: 5px;
-    transition: 0.3s;
+
 }
 
 #contact .submit-btn {
@@ -434,7 +462,7 @@
     width: 95%;
     padding: 20px 0px;
     color: white;
-    background-color: #D6001C;
+    background-color: var(--backgroundcolor1);
     border: none;
     cursor: pointer;
 }
@@ -447,6 +475,7 @@
 /* footer */
 
 #footer {
+    background-color: var(--backgroundcolor1);
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -501,8 +530,11 @@
 }
 
 #footer > span {
+    font-family: var(--headingfont);
+    color: var(--textcolor2);
     font-size: var(--textsize);
-    opacity: 0.8;
+    opacity: 0.9;
+    letter-spacing: 1px;
 }
 
 /* login */
@@ -573,7 +605,7 @@
     border-radius: 20px;
     margin-bottom: 20px;
     outline: none;
-    color: var(--textcolor);
+    color: var(--textcolor3);
 }
 
 #login .remember-account > label {
@@ -589,17 +621,17 @@
     font-size: var(--textsize);
     font-weight: 600;
     border: none;
-    background-color: #D6001C;
+    background-color: var(--backgroundcolor1);
     color: #fff;
     border-radius: 20px;
     cursor: pointer;
     margin-top: 20px;
-    border: 1px solid #D6001C;
+    border: 1px solid #09b445;
 }
 
 #login .submit-btn:hover {
     background-color: #fff;
-    color: #D6001C;
+    color: var(--textcolor1);
     transition: 0.5s;
 }
 
@@ -657,10 +689,14 @@
 #login .login-text > a {
     display: inline;
     text-decoration: unset;
-    color: var(--textcolor);
+    color: var(--textcolor1);
 }
 
 /* chat box */
+
+#chat {
+    box-shadow: 5px 5px 20px #ccc;
+}
 
 #chat > a{
     width: 200px;
@@ -668,13 +704,23 @@
     z-index: 99;
     bottom: 20px;
     right: 20px;
-    background-color: var(--textcolor);
+    background-color: var(--textcolor1);
     font-family: var(--headingfont);
     font-size: 20px;
     line-height: 20px;
     color: #fff;
     text-decoration: unset;
     border-radius: 40px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.8);
+}
+
+/* shop site */
+
+/* product content */
+
+
+#product-content {
+    padding: 200px;
 }
 
 @keyframes loginFadein {
