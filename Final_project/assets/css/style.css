@@ -22,7 +22,7 @@
 
 
 :root {
-    --textcolor1: #09b445;
+    --textcolor1: #1ed760;
     --textcolor2: #fff;
     --textcolor3: #000;
     --textsize: 16px;
@@ -32,8 +32,8 @@
     --headingfont: 'Poppins', sans-serif; 
     --underline-height: .2em;
     --transition-duration: .5s;
-    --backgroundcolor1: #09b445;
-    --backgroundcolor2: #ff9c2e ;
+    --backgroundcolor1: #1ed760;
+    --backgroundcolor2: #fb8c23 ;
 }
 
 #header {
@@ -280,7 +280,7 @@
 
 #content .name-product,
 #box-sale-product .name-product {
-    border-bottom: 1px solid #09b445;
+    border-bottom: 1px solid #1ed760;
 }
 
 #content .product-quickview,
@@ -305,6 +305,49 @@
 #box-sale-product .sale-product:hover .product-quickview {
     display: block;
     animation: quickViewfadein ease 0.5s;
+}
+
+/* View more*/
+
+#viewmore {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    display: flex;
+}
+
+#viewmore .viewmore-container {
+    display: flex;
+    background-color: #fff;
+    width: 70%;
+    height: 500px;
+    padding: 30px 30px;
+}
+
+#viewmore .viewmore-left {
+    width: 50%;
+    height: 90%;
+    background: #ccc;
+}
+
+#viewmore .viewmore-right {
+    width: 50%;
+    padding: 0px 30px;
+}
+
+#viewmore .small-heading-text {
+    color: var(--textcolor1);
+}
+
+#viewmore .body-text {
+    
 }
 
 /* About Us */
@@ -342,7 +385,6 @@
     width: 150px;
     padding: 15px 0;
     border: none;
-    background-color: var(--backgroundcolor2);
     font-family: var(--textfont);
     font-size: var(--textsize);
     color: var(--textcolor3);
@@ -626,7 +668,7 @@
     border-radius: 20px;
     cursor: pointer;
     margin-top: 20px;
-    border: 1px solid #09b445;
+    border: 1px solid #1ed760;
 }
 
 #login .submit-btn:hover {
