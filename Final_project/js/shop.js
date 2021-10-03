@@ -1,62 +1,4 @@
-// menu bar
-
-function ul(index) {
-    console.log('click!' + index)
-    
-    var underlines = document.querySelectorAll(".underline");
-
-
-    for (var i = 0; i < underlines.length; i++) {
-        underlines[i].style.transform = 'translate3d(' + index * 100 + '%,0,0)';
-    }
-}
-
-// search bar
-
-let searchBar = document.querySelector(".search-bar")
-let searchIcon = document.querySelector(".search-icon")
-
-function openSearchbar() {
-    searchBar.classList.add("open-search-bar")
-    searchIcon.classList.add("close-search-icon")
-}
-
-searchIcon.addEventListener('click', openSearchbar)
-
-// slide
-let imangeSlide = [
-    {url: "https://static.wixstatic.com/media/11062b_91a611d9fc74418da54bb15a2e85481d~mv2.jpg/v1/fill/w_1349,h_900,al_c,q_85,usm_0.66_1.00_0.01/11062b_91a611d9fc74418da54bb15a2e85481d~mv2.jpg"},
-    {url: "https://static.wixstatic.com/media/11062b_bebab66faf4440849fe8262659d862b6~mv2.jpg/v1/fill/w_1349,h_899,al_c,q_85,usm_0.66_1.00_0.01/11062b_bebab66faf4440849fe8262659d862b6~mv2.jpg"},
-    {url: "https://static.wixstatic.com/media/11062b_04cb21581b0c4aa184ffe8950598665b~mv2.jpg/v1/fill/w_1349,h_899,al_c,q_85,usm_0.66_1.00_0.01/11062b_04cb21581b0c4aa184ffe8950598665b~mv2.jpg"},
-    {url: ""},
-    {url: ""}
-]
-
-// slide
-document.addEventListener( 'DOMContentLoaded', function () {
-	new Splice( '#image-slider' ).mount();
-} );
-document.addEventListener( 'DOMContentLoaded', function () {
-	new Splide( '#image-slider', {
-		'cover'      : true,
-		'heightRatio': 0.5,
-	} ).mount();
-
-    new Splide("#product-container", {
-        perPage: 5,
-        rewind: true,
-      }).mount();
-} );
-
-document.addEventListener( 'DOMContentLoaded', function () {
-    new Splide("#product-container", {
-        perPage: 5,
-        rewind: true,
-      }).mount();
-} );
-
-// login page
-
+// log in page
 let login = document.querySelector(".account")
 let loginPage = document.querySelector("#login")
 let loginContainer = document.querySelector(".login-container")
@@ -78,7 +20,7 @@ loginContainer.addEventListener('click', function(event) {
 })
 
 // product content
-let dataPopularfood = [
+let dataFood = [
     {
         background: "https://product.hstatic.net/1000303672/product/191008_kho_ga_cay_la_chanh__125g__hu__mau_nap_nhom_-_110625_-_01_f207b52b2a97453d91caedeafe67c0ed.jpg",
         name: "Khô gà",
@@ -141,6 +83,71 @@ let dataPopularfood = [
     }
 ]
 
+let dataDrink = [
+    {
+        background: "https://cf.shopee.vn/file/f6a87bd170eab0d27850ca866bcbc66e",
+        name: "Coca-cola",
+        price: "15.000đ",
+        rate: "5.0"
+    },
+    {
+        background: "https://minhcaumart.vn/media/com_eshop/products/sprite-lon-cao-330ml-MCM.jpg",
+        name: "Sprite",
+        price: "15.000đ",
+        rate: "4.5"
+    },
+    {
+        background: "https://cdn.tgdd.vn/Products/Images/2443/76453/bhx/nuoc-ngot-fanta-vi-cam-lon-330ml-201812281420358633.jpg",
+        name: "Fanta",
+        price: "15.000đ",
+        rate: "4.5"
+    },
+    {
+        background: "https://cdn.tgdd.vn/Products/Images/3226/76519/bhx/nuoc-tang-luc-sting-sleek-huong-dau-320ml-202107142008425331.jpg",
+        name: "Sting",
+        price: "15.000đ",
+        rate: "4.8"
+    },
+    {
+        background: "https://bizweb.dktcdn.net/thumb/1024x1024/100/361/770/products/nuoc-ngot-pepsi-thai-lon-330ml.jpg?v=1570675810693",
+        name: "Pepsi",
+        price: "15.000đ",
+        rate: "4.8"
+    },
+    {
+        background: "https://cdn.tgdd.vn/Products/Images/2282/148785/bhx/bia-heineken-sleek-330ml-202003250703333577.JPG",
+        name: "Heniken",
+        price: "20.000đ",
+        rate: "4.8"
+    },
+    {
+        background: "https://sc04.alicdn.com/kf/U686e0155620b4e02a37af526df81598dG.jpg",
+        name: "Saigon",
+        price: "20.000đ",
+        rate: "4.8"
+    },
+    {
+        background: "https://www.habeco.com.vn/photo/12d05318-7e1d-4306-bd85-57f325cac52b.jpg",
+        name: "Hanoi",
+        price: "20.000đ",
+        rate: "4.8"
+    },
+    {
+        background: "http://cdn.shopify.com/s/files/1/0373/2648/7597/products/sapporopremium_1200x1200.jpg?v=1597133922",
+        name: "Sapporo",
+        price: "50.000đ",
+        rate: "4.8"
+    },
+    {
+        background: "http://cdn.shopify.com/s/files/1/0373/2648/7597/products/2._tiger__b3d67312661a4870ba760e02daf5aac1_grande_f26bd483-1078-44f4-9d73-af91649da00a_1200x1200.jpg?v=1595421630",
+        name: "Tiger",
+        price: "20.000đ",
+        rate: "4.8"
+    },
+]
+
+let dataAll = dataFood.concat(dataDrink)
+
 function renderData(data) {
     let cardProduct = document.querySelector("#product-box")
     
@@ -169,31 +176,22 @@ function renderData(data) {
     }
 }
 
-renderData(dataPopularfood)
+renderData(dataAll)
+// filter
 
-// view more
-
-let viewMore = document.querySelector(".viewmore")
-let openViewmore = document.querySelector(".product-quickview")
-let closeViewmore = document.querySelector(".close-icon")
-let viewMorecontainer = document.querySelector(".viewmore-container")
-
-function showMore() {
-    viewMore.classList.add('viewmore-open')
+let foodBtn = document.querySelector("#food-btn")
+function openFood() {
+    foodBtn.classList.add('click-food')
+    drinkBtn.classList.remove('click-drink')
+    renderData(dataFood)
 }
+foodBtn.addEventListener('click', openFood)
 
-function closeMore() {
-    viewMore.classList.remove('viewmore-open')
+
+let drinkBtn = document.querySelector("#drink-btn")
+function openDrink() {
+    foodBtn.classList.remove('click-food')
+    drinkBtn.classList.add('click-drink')
+    renderData(dataDrink)
 }
-
-openViewmore.addEventListener('click', showMore)
-closeViewmore.addEventListener('click', closeMore)
-viewMore.addEventListener('click', closeMore)
-
-viewMorecontainer.addEventListener('click', function(event) {
-    event.stopPropagation()
-})
-
-
-
-
+drinkBtn.addEventListener('click', openDrink)
