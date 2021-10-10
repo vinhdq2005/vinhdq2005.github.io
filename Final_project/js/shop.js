@@ -19,6 +19,26 @@ loginContainer.addEventListener('click', function(event) {
     event.stopPropagation()
 })
 
+// cart
+let openCarticon = document.querySelector(".cart-icon")
+let closeCarticon = document.querySelector(".close-cart")
+let cartNavbar = document.querySelector(".cart")
+let cartContainer = document.querySelector(".cart-container")
+
+function showCart() {
+    cartNavbar.classList.add('open-cart')
+}
+function closeCart() {
+    cartNavbar.classList.remove('open-cart')
+}
+
+openCarticon.addEventListener('click', showCart)
+closeCarticon.addEventListener('click', closeCart)
+cartContainer.addEventListener('click', function(event) {
+    event.stopPropagation()
+})
+
+
 // product content
 let dataFood = [
     {

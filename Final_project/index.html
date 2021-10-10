@@ -12,18 +12,19 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="shortcut icon"
-      href="./assets/img/logo chuẩn.jpg"
+      href="./assets/img/Logo-DF.png"
       type="image/x-icon"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div id="container">
       <div id="header">
-        <img src="./assets/img/logo chuẩn.jpg" alt="" class="brand-logo" />
+        <img src="./assets/img/Logo-DF.png" alt="" class="brand-logo" />
         <ul id="nav">
           <div class="underline"></div>
           <div class="underline"></div>
@@ -264,6 +265,40 @@
 
     <div id="chat">
       <a href="#"><i class="fas fa-comment-lines"></i> Let's chat</a>
+    </div>
+
+    <div class="cart">
+      <div class="cart-container">
+        <div class="cart-content">
+          <div class="cart-heading">
+            <i class="far fa-chevron-right close-cart"></i>
+            <h3 class="heading-text">Cart</h3>
+          </div>
+          <div class="cart-product">
+            <div class="product">
+              <div class="image-product-cart">
+
+              </div>
+              <div class="product-content-cart">
+                <h3 class="name-product-cart">I'm a product</h3>
+                <p class="price-product-cart">49.999d</p>
+                <div class="quantity">
+                  <input type="number" min="0" value="1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="submit-cart">
+            <div class="total-price">
+              <h3 class="total">Total: </h3>
+              <p class="total">49.999d</p>
+            </div>
+            <div class="viewcart-btn">
+              <button class="view-cart">View Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>

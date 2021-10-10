@@ -1,3 +1,5 @@
+
+
 // menu bar
 
 function ul(index) {
@@ -74,6 +76,26 @@ loginPage.addEventListener('click', hideLogin)
 login.addEventListener('click', showLogin)
 
 loginContainer.addEventListener('click', function(event) {
+    event.stopPropagation()
+})
+
+// cart
+
+let openCarticon = document.querySelector(".cart-icon")
+let closeCarticon = document.querySelector(".close-cart")
+let cartNavbar = document.querySelector(".cart")
+let cartContainer = document.querySelector(".cart-container")
+
+function showCart() {
+    cartNavbar.classList.add('open-cart')
+}
+function closeCart() {
+    cartNavbar.classList.remove('open-cart')
+}
+
+openCarticon.addEventListener('click', showCart)
+closeCarticon.addEventListener('click', closeCart)
+cartContainer.addEventListener('click', function(event) {
     event.stopPropagation()
 })
 
@@ -171,6 +193,7 @@ function renderData(data) {
 
 renderData(dataPopularfood)
 
+
 // view more
 
 let viewMore = document.querySelector(".viewmore")
@@ -195,5 +218,38 @@ viewMorecontainer.addEventListener('click', function(event) {
 })
 
 
+// cart number (css input number)
+jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
+    jQuery('.quantity').each(function() {
+      var spinner = jQuery(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find('.quantity-up'),
+        btnDown = spinner.find('.quantity-down'),
+        min = input.attr('min'),
+        max = input.attr('max');
+
+      btnUp.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue >= max) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue + 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+      btnDown.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue <= min) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+    });
 
 
