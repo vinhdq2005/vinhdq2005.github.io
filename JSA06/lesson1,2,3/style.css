@@ -12,6 +12,8 @@
     width: 100%;
     height: 100vh;
     padding: 20px 10% 0;
+    position: relative;
+    background-attachment: fixed;
 }
 .s1 > nav {
     display: flex;
@@ -46,7 +48,9 @@
     transition: 0.3s;
 }
 .s1 .content {
-    margin-top: 80px;
+    position: absolute;
+    top: 35%;
+    left: 10%;
 }
 .s1 .content > p {
     color: #fff;
@@ -86,7 +90,7 @@
 }
 .s2 {
     font-family: 'Lato', 'Arial', sans-serif;
-    padding: 50px 10%
+    padding: 100px 10%
 }
 .s2 .s2-header > h2{
     font-size: 36px;
@@ -161,9 +165,208 @@
     
 }
 .s3 img:hover {
-    /* -webkit-transform: scale(1.2); */
     transform: scale(1.03);
     opacity: 1;
     cursor: pointer;
     transition: 0.5s;
+}
+.s4 {
+    font-family: 'Lato', 'Arial', sans-serif;
+    padding: 100px 10%;
+    background-color: #f4f4f4;
+}
+.s4 .s4-header h2 {
+    font-size: 36px;
+    word-spacing: 2px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #555;
+    padding: 0 0 30px;
+}
+.s4 .s4-header > h2::after {
+    display: block;
+    height: 2px;
+    background-color: #e67622;
+    width: 100px;
+    content: " ";
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.s4-content {
+    display: flex;
+    justify-content: space-between;
+}
+.s4-content .s4-content-left {
+    width: 45%;
+    display: flex;
+    justify-content: end;
+   
+}
+.s4-content .s4-content-left img {
+    width: 40%;
+    
+}
+.s4-content .s4-content-right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+.s4-content-right .step {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.s4-content-right .step div {
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    color: #e67622;
+    border: 1px solid #e67622;
+    border-radius: 50%;
+    margin-right: 25px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 55px;
+}
+.s4-content-right .step p {
+    display: inline-block;
+    width: 80%;
+    font-size: 20px;
+    color: #555;
+    align-items: center;
+}
+.s4-content .app-btn {
+    text-decoration: none;
+}
+.s4-content .app-btn img {
+    height: 50px;
+    margin-top: 50px;
+}
+.s5 {
+    width: 100%;
+    padding: 100px 10%;
+    font-family: 'Lato', 'Arial', sans-serif;
+}
+.s5 .s5-header h2{
+    font-size: 36px;
+    word-spacing: 2px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #555;
+    padding: 0 0 30px;
+}
+.s5 .s5-header > h2::after {
+    display: block;
+    height: 2px;
+    background-color: #e67622;
+    width: 100px;
+    content: " ";
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.s5 .s5-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.s5 .s5-infor {
+    width: 23%;
+}
+.s5 .s5-infor img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.s5 .s5-infor > h3 {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.s5 .city-feature {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+}
+.s5 .city-feature > i {
+    color: #e67622;
+    margin-right: 5px;
+}
+.s5 .city-feature > a {
+    color: #e67622;
+}
+.s6 {
+    width: 100%;
+    padding: 100px 10%;
+    font-family: 'Lato', 'Arial', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(./image/back-customers.jpg);
+    background-attachment: fixed;
+}
+.s6 .s6-header h2{
+    font-size: 36px;
+    word-spacing: 2px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0 0 30px;
+}
+.s6 .s6-header > h2::after {
+    display: block;
+    height: 2px;
+    background-color: #e67622;
+    width: 100px;
+    content: " ";
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.s6 .s6-content {
+    display: flex;
+    justify-content: space-between;
+}
+.s6 .s6-qoute {
+    padding: 2px;
+    width: 30%;
+    color: #fff;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    position: relative;
+    margin-top: 50px;
+}
+.s6 .s6-qoute::before {
+    content: "\201C";
+    font-size: 500%;
+    position: absolute;
+    top: -55px;
+    left: -5px;
+    display: block;
+}
+.s6 .author {
+    display: flex;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 50px;
+}
+.s6 .author img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.s6 .author p {
+    margin-left: 15px;
 }
