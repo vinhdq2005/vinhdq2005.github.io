@@ -12,19 +12,28 @@ findEven(20)
 
 // bai 2
 console.log("Bai 2: ");
+const header = document.getElementById('header')
+function handleHover() {
+    header.style.backgroundColor = 'blue'
+    header.style.color = 'red'
+}
+function handleOut() {
+    header.style.backgroundColor = 'red'
+    header.style.color = 'blue'
+}
 
 // bai 3
 console.log("bai 3: ");
 
-let one = "";
+
 function numberOneTriangle (line) {
     for (let i = 1; i <= line; i++) {
+        let one = "";
         for (let k = 0; k < i; k++) {
             one += "1"
         }
-        one += "\n"
+        console.log(one);
     }
-    console.log(one);
 }
 numberOneTriangle(5)
 
