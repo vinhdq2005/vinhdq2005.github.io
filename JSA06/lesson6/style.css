@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    
+    width: 400px;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+}
+#checkAccount {
+    color: red;
+}
