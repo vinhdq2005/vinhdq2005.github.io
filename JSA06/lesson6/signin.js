@@ -23,7 +23,7 @@ signInForm.onsubmit = (e) => {
 
 
     for (let i = 0; i <= localUsers.length; i++) {
-        if (email == localUsers[i].email || password == localUsers[i].password){
+        if (email == localUsers[i].email && password == localUsers[i].password){
             console.log("hello");
         } else {
             checkAccount("#checkAccount", "We cannot find an account with that email address")
