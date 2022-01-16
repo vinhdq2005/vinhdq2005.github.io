@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-location {
+    text-align: center;
+}
+
+.weather {
+    border: 2px solid #888;
+    border-radius: 10px;
+    margin: 30px 0 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather .weather-img{
+    width: 100%;
+    border-bottom: 1px solid #888;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.weather .weather-content {
+    padding-top: 20px;
+}
+.temperature,
+.location,
+.detail {
+    text-align: center;
+    padding-bottom: 5px;
+}
+.input-location {
+    padding: 3px 5px;
+}
+.btn-submit {
+    padding: 3px 5px
+}
