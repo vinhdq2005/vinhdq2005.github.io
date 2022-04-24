@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.container {
+    padding: 20px 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.logo a span:nth-child(1) {
+    color: #0A66C2;
+}
+
+.logo a span:nth-child(2) {
+    color: #fff;
+    background-color: #0A66C2;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+    border-radius: 10px;
+}
+
+.content .form-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .form-top p {
+    margin: 10px 0;
+}
+
+.content .form-top input {
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 10px 0;
+    padding: 10px 5px;
+    outline: none;
+}
+
+.content .form-top span {
+    width: fit-content;
+    text-decoration: none;
+    color: #0A66C2;
+    padding: 8px 8px;
+    cursor: pointer;
+}
+
+.content .form-top span:hover {
+    background-color: #d0e8ff;
+    text-decoration: underline;
+    color: #0A66C2;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.content .form-top button {
+    margin: 10px 0;
+    padding: 10px 5px;
+    border-radius: 50px;
+    font-size: 20px;
+    border: none;
+    background-color: #0A66C2;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content .form-top button:hover {
+    background-color: #006097;
+    transition: 0.5s;
+}
+
+.layout {
+    display: flex;
+    align-items: center;
+}
+
+.layout span {
+    padding: 0 15px;
+}
+
+form .layout::before {
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: rgba(0,0,0,0.15);
+}
+
+form .layout::after {
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: rgba(0,0,0,0.15);
+}
+
+form > button {
+    margin: 10px 0;
+    padding: 10px 5px;
+    border-radius: 50px;
+    font-size: 15px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.register a{
+    text-decoration: none;
+    color: #0A66C2;
+    padding: 8px;
+}
+
+.register a:hover {
+    background-color: #d0e8ff;
+    text-decoration: underline;
+    color: #0A66C2;
+    border-radius: 20px;
+    transition: 0.5s;
+}
