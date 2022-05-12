@@ -29,6 +29,8 @@ form_.onsubmit = (e) => {
         var user = userCredential.user;
         if (user.emailVerified) {
           sweetAlert("success", "Welcome back!")
+
+          open("../updateAccount.html", "_self")
         } else {
           sweetAlert("error", "Please verify your email")
         }
