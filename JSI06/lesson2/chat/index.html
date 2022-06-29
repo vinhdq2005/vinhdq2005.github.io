@@ -20,7 +20,8 @@
       <div class="row g-0 ">
         <div class="col-md-4 border-end">
           <div class="setting-tray">
-            <img class="profile-image" src="./img/ava.jpg" alt="">
+            <img class="profile-image" id="userImg" src="./img/ava.jpg" alt="">
+            <span id="userName">User</span>
             <span class="setting-tray--right float-end">
               <i onclick="signOut()" class="fa-solid fa-right-from-bracket"></i>
               <i class="fa-solid fa-bars"></i>
@@ -53,7 +54,7 @@
                 </label>
               </span>
               <div class="time d-flex align-items-center ms-4">
-                <p>00:00</p>
+                <p id="realTime">00:00:00</p>
               </div>
             </div>
           </div>
@@ -78,12 +79,12 @@
           </div>
           <div class="row ">
               <div class="col-12">
-                <div class="chat-box-tray">
+                <form class="chat-box-tray" id="chat_input_form">
                   <i class="fa-solid fa-face-smile"></i>
-                  <input type="text" placeholder="Type your message here....">
+                  <input name="chat" type="text" placeholder="Type your message here....">
                   <i class="fa-solid fa-microphone"></i>
                   <i class="fa-solid fa-paper-plane"></i>
-                </div>
+                </form>
               </div>
             </div>
         </div>

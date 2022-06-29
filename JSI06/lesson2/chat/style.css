@@ -45,6 +45,11 @@ body {
   transition: 0.3s;
 }
 
+.setting-tray #userName {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .search-box {
   background: #fafafa;
   padding: 10px 13px;
@@ -310,9 +315,11 @@ body.darkmode .chat-panel::-webkit-scrollbar-thumb {
 }
 
 body.darkmode .friend-drawer h6,
-body.darkmode .friend-drawer p {
+body.darkmode .friend-drawer p,
+body.darkmode .setting-tray #userName  {
   margin-top: 6px;
   margin-bottom: 0;
   color: #eee;
+  transition: 0.5ms;
 }
 
