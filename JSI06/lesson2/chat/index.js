@@ -18,6 +18,7 @@ firebase.auth().onAuthStateChanged((user) => {
     loadchat(user.email);
     console.log(user);
     renderCurrentUser(user.photoURL, user.displayName);
+    setUpConversationchange(email_)
     // ...
   } else {
     // User is signed out
@@ -121,6 +122,7 @@ let sweetAlert = (icon, message) => {
 let renderChat = (data, ownerEmail) => {
   let chat = data.chat;
   currentid_ = data.id
+  
   let dom = document.querySelector(".chat-panel");
   dom.innerHTML = "";
 
@@ -140,6 +142,9 @@ let renderChat = (data, ownerEmail) => {
 
     dom.innerHTML += html;
   }
+
+  let chat_scroll = document.querySelector(".chat-panel")
+  chat_scroll.scrollTop = chat_scroll.scrollHeight
 };
 
 let renderUserList = (data, email) => {
@@ -185,6 +190,7 @@ formChat.onsubmit = (e) => {
   let content = formChat.chat.value.trim();
 
   updateNewMessage(content, email_, img_, clock(), currentid_)
+  formChat.chat.value = ""
 };
 
 let updateNewMessage = async (content, email, img, time, currentID) => {
@@ -205,3 +211,67 @@ let updateNewMessage = async (content, email, img, time, currentID) => {
       });
   }
 };
+
+
+let setUpConversationchange =  async (email) => {
+  let skipRun = true
+  let currentEmail = email
+  firebase.firestore()
+  .collection('chat')
+  .where('users', 'array-contains', currentEmail)
+  .onSnapshot(function (snapshot) {
+      if (skipRun) {
+          skipRun = false
+          return
+      }
+
+      let docChanges = snapshot.docChanges()
+      for (let docChange of docChanges) {
+          let type = docChange.type
+          let conversationDoc = docChange.doc
+          let data = getDataFromDoc(conversationDoc)
+
+          if (type == 'modified') {
+            renderChat(data, email_)
+          }
+          if(type == 'added'){
+              
+          }
+      }
+  })
+
+}
+
+
+let addConversation = async (data) => {
+  await firebase.firestore().collection('chat').add(data)
+}
+
+document.querySelector("#addConversation_btn").addEventListener("click", () => {
+  let chatName = document.querySelector("#addConversation_Name").value
+  let users = document.querySelector("#addConversation_Users").value
+  let listUsers = users.trim().split(" ")
+  if (email_) {
+    listUsers.push(email_)
+  }
+  let photo = document.querySelector("#addConversation_Photo").files[0]
+
+  const ref = firebase.storage().ref();
+  const metadata = {
+    contentType: photo.type,
+  };
+  const name = photo.name;
+
+  const Upload = ref.child(name).put(photo, metadata);
+  Upload.then((snapshot) => snapshot.ref.getDownloadURL()).then((url) => {
+    let data = {
+      avatar: url,
+      chat: [],
+      name: chatName,
+      timeStart: clock(),
+      users: listUsers,
+    };
+    addConversation(data);
+  });
+})
+

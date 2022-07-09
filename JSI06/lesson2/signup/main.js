@@ -59,7 +59,7 @@ form_.onsubmit = (e) => {
 
         localStorage.setItem("currentUser", user.email)
 
-        open("./verifyemail.html")
+        // open("./verifyemail.html")
         open("../signin/index.html", "_self")
       })
       .catch((error) => {
