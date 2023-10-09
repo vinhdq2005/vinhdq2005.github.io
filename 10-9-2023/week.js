@@ -1,15 +1,3 @@
-
-
-// startDate = new Date(currentDate.getFullYear(), 0, 1);
-// console.log(currentDate-startDate);
-// var days = Math.floor((currentDate - startDate) / (24 * 60 * 60 * 1000));
-// console.log(days/7);
-
-// var weekNumber = Math.ceil(days / 7);
-
-// Display the calculated result
-// console.log("Week number of " + currentDate + " is :   " + weekNumber);
-
 let form_inp_num = document.getElementById('form-date')
 form_inp_num.onsubmit = (e) => {
     e.preventDefault()
