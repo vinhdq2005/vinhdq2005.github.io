@@ -1,0 +1,5 @@
+print("Input first number:", end="")
+inp_num1 = int(input())
+print("Input second number:", end="")
+inp_num2 = int(input())
+print(inp_num1, "+", inp_num2, "=", inp_num1+inp_num2)
