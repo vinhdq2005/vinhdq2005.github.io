@@ -9,3 +9,4 @@ for i in range(2, inp_num):
     num1 = num2
     num2 = fibonacci
     print(fibonacci, end=" ")
+print(fibonacci)

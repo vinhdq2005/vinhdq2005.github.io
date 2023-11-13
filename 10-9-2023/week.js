@@ -8,7 +8,6 @@ form_inp_num.onsubmit = (e) => {
     var days = inp*7
     startWeek.setDate(startWeek.getDate() + days - 6)
     endWeek.setDate(endWeek.getDate() + days)
-    console.log(startWeek);
 
     let result_start = document.getElementById("start")
     let result_end = document.getElementById("end")

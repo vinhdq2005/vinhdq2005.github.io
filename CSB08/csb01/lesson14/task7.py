@@ -6,6 +6,7 @@ for i in num_list:
 print("\n")
 def sort(list):
     length = len(list)
+    
     for i in range(length-1, 0, -1):
         for k in range(i):
             if list[k] > list[k+1]:
